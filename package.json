@@ -1,13 +1,20 @@
-(
-echo {
-echo   "name": "ci-test",,,
-echo   "version": "1.0.0",
-echo   "engines": {
-echo     "node": ">=20.0.0"
-echo   },
-echo   "scripts": {
-echo     "build": "echo built"
-echo   }
-echo }
-) > package.json
-   
+{
+  "name": "caselab-ci-test",
+  "version": "1.0.0",
+  "description": "Sandbox repo for validating CaseLab diagnosis engine",
+  "private": true,
+  "engines": {
+    "node": "20.x"
+  },
+  "scripts": {
+    "build": "echo 'build ok'",
+    "test": "jest --passWithNoTests",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
