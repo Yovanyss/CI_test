@@ -1,6 +1,6 @@
 (
 echo {
-echo   "name": "ci-test",,,,
+echo   "name": "ci-test",
 echo   "version": "1.0.0",
 echo   "engines": {
 echo     "node": ">=20.0.0"
