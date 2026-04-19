@@ -1,12 +1,10 @@
-(
-echo {
-echo   "name": "ci-test",,,
-echo   "version": "1.0.0",
-echo   "engines": {
-echo     "node": ">=20.0.0"
-echo   },
-echo   "scripts": {
-echo     "build": "echo built"
-echo   }
-echo }
-) > package.json
+{
+  "name": "ci-test",,,
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "build": "echo built"
+  }
+}
