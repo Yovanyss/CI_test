@@ -1,25 +1,12 @@
 name: CI
-on: [push]
+on: [push, pull_request]
 jobs:
   build:
-    runs-on: unnnbeeuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '16'
-      - run: npm install
-      - name: Check Node version
-        run: |
-          echo "Current Node version: $(node --version)"
-          node -e "
-          const v = parseInt(process.versions.node.split('.')[0]);
-          console.log('npm warn EBADENGINE unsupported engine');
-          console.log('npm warn EBADENGINE   required: { node: >=18 }');
-          console.log('npm warn EBADENGINE   current: { node: v' + process.versions.node + ' }');
-          if(v < 18) { 
-            console.error('npm error code EBADENGINE');
-            console.error('npm error engine Unsupported engine');
-            process.exit(1); 
-          }
-          "
+          node-version: '20'
+      - run: npm ci
+      - run: npm run build
