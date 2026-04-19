@@ -2,6 +2,8 @@ name: CI
 on: [push, pull_request]
 jobs:
   build:
+    env:
+      is: ${{ secrets.is }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
